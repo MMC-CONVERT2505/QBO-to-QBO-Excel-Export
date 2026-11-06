@@ -10,10 +10,12 @@ import { asyncHandler } from "../utils/asyncHandler.js";
 // region doesn't support yet instead of failing at export time).
 export const getRegions = (req, res) => {
 
-    const regions = Object.values(REGIONS).map((region) => ({
-        ...region,
-        availableModules: listAvailableTemplates(region.code)
-    }));
+    const regions = Object.values(REGIONS)
+        .filter((region) => !region.hidden)
+        .map(({ hidden, ...region }) => ({
+            ...region,
+            availableModules: listAvailableTemplates(region.code)
+        }));
 
     res.status(200).json({ success: true, regions });
 

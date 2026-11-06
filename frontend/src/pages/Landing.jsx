@@ -98,11 +98,9 @@ const Landing = () => {
                         transition={{ duration: 0.5, delay: 0.08 }}
                         className="text-4xl sm:text-5xl font-bold text-ink-900 leading-[1.1] tracking-tight"
                     >
-                        Move accounting data between
+                        Export QuickBooks data to
                         <br className="hidden sm:block" />
-                        <span className="text-gradient">QBO regions</span> — without writing
-                        <br className="hidden sm:block" />
-                        anything back to QuickBooks.
+                        <span className="text-gradient">regional Excel templates</span>
                     </motion.h1>
 
                     <motion.p
@@ -112,7 +110,8 @@ const Landing = () => {
                         className="mt-5 text-lg text-ink-500 max-w-xl mx-auto"
                     >
                         Connect a source QuickBooks company, pick a destination region, and download
-                        an Excel file already shaped for that region's accounting template.
+                        an Excel file already shaped for that region's import template. Read-only,
+                        nothing is written back to QuickBooks.
                     </motion.p>
 
                     <motion.div

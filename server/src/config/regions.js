@@ -42,7 +42,10 @@ export const REGIONS = {
         label: "New Zealand",
         currency: "NZD",
         taxLabel: "GST",
-        qboCountryMatch: ["NZ", "NZL"]
+        qboCountryMatch: ["NZ", "NZL"],
+        // Hidden from the destination picker (GET /api/regions). Mappings and
+        // templates are kept; remove this flag to show the region again.
+        hidden: true
     },
 
     ZA: {
