@@ -1,0 +1,60 @@
+{
+    "entity": "account",
+    "region": "US",
+    "templateSheet": "Accounts",
+    "columns": [
+        {
+            "header": "Account Name",
+            "source": "fullyQualifiedName",
+            "required": true,
+            "transform": "trim"
+        },
+        {
+            "header": "Account Type",
+            "source": "accountType",
+            "required": true,
+            "valueMap": {
+                "Income": "Income Account",
+                "Expense": "Expense Account",
+                "Bank": "Bank",
+                "Accounts Receivable": "Accounts Receivable",
+                "Accounts Payable": "Accounts Payable",
+                "Fixed Asset": "Fixed Asset",
+                "Other Current Asset": "Current Asset",
+                "Other Current Liability": "Current Liability",
+                "Long Term Liability": "Long Term Liability",
+                "Equity": "Equity",
+                "Cost of Goods Sold": "Cost of Goods Sold"
+            }
+        },
+        {
+            "header": "Account Sub Type",
+            "source": "accountSubType"
+        },
+        {
+            "header": "Account Number",
+            "source": "accountNumber"
+        },
+        {
+            "header": "Description",
+            "source": "description"
+        },
+        {
+            "header": "Currency",
+            "source": "currency",
+            "defaultValue": "USD"
+        },
+        {
+            "header": "Parent Account",
+            "source": "parentAccountId"
+        },
+        {
+            "header": "Status",
+            "source": "active",
+            "valueMap": {
+                "true": "Active",
+                "false": "Inactive"
+            }
+        }
+    ]
+}

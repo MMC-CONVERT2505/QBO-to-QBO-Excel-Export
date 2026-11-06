@@ -1,0 +1,15 @@
+{
+    "entity": "billOverpayment",
+    "region": "ZA",
+    "templateSheet": "BillOverpayment",
+    "columns": [
+        { "header": "Ref No *", "source": "docNumber", "required": true, "transform": "trim" },
+        { "header": "Payment Date *", "source": "paymentDate", "required": true, "transform": "date_ddmmyyyy" },
+        { "header": "Memo", "source": "memo" },
+        { "header": "Vendor *", "source": "vendorName", "required": true },
+        { "header": "Bank or CC Account *", "source": "accountName", "required": true },
+        { "header": "Amount *", "source": "amount", "required": true },
+        { "header": "Currency Code", "source": "currency" },
+        { "header": "Exchange Rate", "source": "exchangeRate" }
+    ]
+}

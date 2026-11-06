@@ -1,0 +1,13 @@
+{
+    "entity": "openBalance",
+    "region": "ZA",
+    "templateSheet": "Opening Balance",
+    "columns": [
+        { "header": "Journal No", "staticValue": "Opening Balance", "required": true },
+        { "header": "Journal Date", "source": "journalDate", "required": true, "transform": "date_ddmmyyyy" },
+        { "header": "Account", "source": "accountName", "required": true, "transform": "trim" },
+        { "header": "Amount", "source": "amount", "required": true },
+        { "header": "Currency Code", "source": "currency", "defaultValue": "ZAR" },
+        { "header": "Exchange Rate", "source": "exchangeRate", "defaultValue": 1 }
+    ]
+}

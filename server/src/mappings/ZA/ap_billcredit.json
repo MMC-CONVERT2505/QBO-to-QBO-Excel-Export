@@ -1,0 +1,41 @@
+{
+    "entity": "ap_billcredit",
+    "region": "ZA",
+    "templateSheet": "Bill Credit",
+    "columns": [
+        {
+            "header": "Ref No *",
+            "source": "docNumber",
+            "transform": "trim"
+        },
+        {
+            "header": "Vendor *",
+            "source": "vendorName",
+            "required": true
+        },
+        {
+            "header": "Payment Date *",
+            "source": "txnDate",
+            "required": true,
+            "transform": "date_ddmmyyyy"
+        },
+        {
+            "header": "Expense Account *",
+            "staticValue": "Retained Earnings",
+            "required": true
+        },
+        {
+            "header": "Expense Line Amount *",
+            "source": "openBalance",
+            "required": true
+        },
+        {
+            "header": "Currency Code",
+            "source": "currency"
+        },
+        {
+            "header": "Exchange Rate",
+            "source": "exchangeRate"
+        }
+    ]
+}

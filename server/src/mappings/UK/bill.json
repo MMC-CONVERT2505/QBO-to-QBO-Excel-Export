@@ -1,0 +1,59 @@
+{
+    "entity": "bill",
+    "region": "UK",
+    "templateSheet": "Bills",
+    "columns": [
+        {
+            "header": "Bill Number",
+            "source": "docNumber"
+        },
+        {
+            "header": "Bill Date",
+            "source": "txnDate",
+            "required": true
+        },
+        {
+            "header": "Due Date",
+            "source": "dueDate"
+        },
+        {
+            "header": "Vendor",
+            "source": "vendorName",
+            "required": true
+        },
+        {
+            "header": "Line Description",
+            "source": "lineDescription"
+        },
+        {
+            "header": "Account",
+            "source": "lineAccountName"
+        },
+        {
+            "header": "Item",
+            "source": "lineItemName"
+        },
+        {
+            "header": "Line Amount",
+            "source": "lineAmount",
+            "required": true
+        },
+        {
+            "header": "VAT Code",
+            "source": "lineTaxCode"
+        },
+        {
+            "header": "Currency",
+            "source": "currency",
+            "defaultValue": "GBP"
+        },
+        {
+            "header": "Total Amount",
+            "source": "totalAmount"
+        },
+        {
+            "header": "Status",
+            "source": "status"
+        }
+    ]
+}

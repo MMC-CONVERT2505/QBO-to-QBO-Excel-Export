@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html { @apply antialiased; }
+  body { @apply bg-ink-50 text-ink-900 font-sans; font-feature-settings: "tnum" 1, "cv11" 1; }
+}
+
+@keyframes toast-in {
+  from { opacity: 0; transform: translateY(-8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.animate-toast-in { animation: toast-in 0.18s ease-out; }
+
+/* Slim, unobtrusive scrollbars for the app shell */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: theme("colors.ink.300") transparent;
+}
+*::-webkit-scrollbar { width: 8px; height: 8px; }
+*::-webkit-scrollbar-track { background: transparent; }
+*::-webkit-scrollbar-thumb {
+  background-color: theme("colors.ink.300");
+  border-radius: 9999px;
+}
+
+.shimmer-bg {
+  background: linear-gradient(
+    90deg,
+    theme("colors.ink.100") 25%,
+    theme("colors.ink.50") 37%,
+    theme("colors.ink.100") 63%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.8s linear infinite;
+}
+
+.text-gradient {
+  background: linear-gradient(90deg, #142B4A 0%, #0F8B8D 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+@keyframes draw-check { from { stroke-dashoffset: 24; } to { stroke-dashoffset: 0; } }
+.animate-draw-check { stroke-dasharray: 24; animation: draw-check 0.4s ease-out 0.15s both; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

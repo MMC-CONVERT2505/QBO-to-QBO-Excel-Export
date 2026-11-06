@@ -1,0 +1,154 @@
+{
+  "entity": "customer",
+  "region": "ZA",
+  "templateSheet": "Customers",
+  "columns": [
+    {
+      "header": "Company",
+      "source": "companyName"
+    },
+    {
+      "header": "First Name",
+      "source": "firstName"
+    },
+    {
+      "header": "Last Name",
+      "source": "lastName"
+    },
+    {
+      "header": "Display Name As *",
+      "source": "displayName",
+      "required": true,
+      "transform": "trim"
+    },
+    {
+      "header": "Print On Check As",
+      "source": "printOnCheckName"
+    },
+    {
+      "header": "Billing Address Line 1",
+      "source": "billingLine1"
+    },
+    {
+      "header": "Billing Address City",
+      "source": "billingCity"
+    },
+    {
+      "header": "Billing Address Postal Code",
+      "source": "billingPostalCode"
+    },
+    {
+      "header": "Billing Address Country",
+      "source": "billingCountry"
+    },
+    {
+      "header": "Billing Address Country Subdivision Code",
+      "source": "billingRegion"
+    },
+    {
+      "header": "Phone",
+      "source": "phone"
+    },
+    {
+      "header": "Email",
+      "source": "email"
+    },
+    {
+      "header": "Tax Resale No",
+      "source": "resaleNumber"
+    },
+    {
+      "header": "Customer Taxable",
+      "source": "taxable",
+      "valueMap": {
+        "true": "Yes",
+        "false": "No"
+      }
+    },
+    {
+      "header": "Currency Code",
+      "source": "currency",
+      "defaultValue": "ZAR"
+    },
+    {
+      "header": "Title",
+      "source": "title"
+    },
+    {
+      "header": "Middle Name",
+      "source": "middleName"
+    },
+    {
+      "header": "Suffix",
+      "source": "suffix"
+    },
+    {
+      "header": "Billing Address Line 2",
+      "source": "billingLine2"
+    },
+    {
+      "header": "Billing Address Line 3",
+      "source": "billingLine3"
+    },
+    {
+      "header": "Shipping Address Line 1",
+      "source": "shippingLine1"
+    },
+    {
+      "header": "Shipping Address Line 2",
+      "source": "shippingLine2"
+    },
+    {
+      "header": "Shipping Address Line 3",
+      "source": "shippingLine3"
+    },
+    {
+      "header": "Shipping Address City",
+      "source": "shippingCity"
+    },
+    {
+      "header": "Shipping Address Postal Code",
+      "source": "shippingPostalCode"
+    },
+    {
+      "header": "Shipping Address Country",
+      "source": "shippingCountry"
+    },
+    {
+      "header": "Shipping Address Country Subdivision Code",
+      "source": "shippingRegion"
+    },
+    {
+      "header": "Mobile",
+      "source": "mobile"
+    },
+    {
+      "header": "Fax",
+      "source": "fax"
+    },
+    {
+      "header": "Other",
+      "source": "otherPhone"
+    },
+    {
+      "header": "Website",
+      "source": "website"
+    },
+    {
+      "header": "Terms",
+      "source": "termName"
+    },
+    {
+      "header": "Preferred Payment Method",
+      "source": "paymentMethodName"
+    },
+    {
+      "header": "Preferred Delivery Method",
+      "source": "deliveryMethod"
+    },
+    {
+      "header": "Notes",
+      "source": "notes"
+    }
+  ]
+}

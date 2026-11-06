@@ -1,0 +1,62 @@
+{
+    "entity": "ar_invoice",
+    "region": "NZ",
+    "templateSheet": "Invoice",
+    "columns": [
+        {
+            "header": "Invoice No *",
+            "source": "docNumber",
+            "required": true,
+            "transform": "trim"
+        },
+        {
+            "header": "Customer *",
+            "source": "customerName",
+            "required": true
+        },
+        {
+            "header": "Invoice Date *",
+            "source": "txnDate",
+            "required": true,
+            "transform": "date_ddmmyyyy"
+        },
+        {
+            "header": "Due Date *",
+            "source": "dueDate",
+            "required": true,
+            "transform": "date_ddmmyyyy"
+        },
+        {
+            "header": "Product/Service *",
+            "staticValue": "Sales",
+            "required": true
+        },
+        {
+            "header": "Product/Service Quantity *",
+            "staticValue": 1,
+            "required": true
+        },
+        {
+            "header": "Product/Service Rate *",
+            "source": "openBalance",
+            "required": true
+        },
+        {
+            "header": "Product/Service Amount *",
+            "source": "openBalance",
+            "required": true
+        },
+        {
+            "header": "Currency code",
+            "source": "currency"
+        },
+        {
+            "header": "Exchange Rate",
+            "source": "exchangeRate"
+        },
+        {
+            "header": "Terms",
+            "source": "salesTermName"
+        }
+    ]
+}

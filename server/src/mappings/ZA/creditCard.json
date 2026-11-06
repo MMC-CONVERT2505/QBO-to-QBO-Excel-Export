@@ -1,0 +1,23 @@
+{
+    "entity": "creditCard",
+    "region": "ZA",
+    "templateSheet": "CreditCard",
+    "columns": [
+        { "header": "Ref No *", "source": "docNumber", "required": true, "transform": "trim" },
+        { "header": "Account *", "source": "accountName", "required": true },
+        { "header": "Payee", "source": "payeeName" },
+        { "header": "Payment Date *", "source": "paymentDate", "required": true, "transform": "date_ddmmyyyy" },
+        { "header": "Memo", "source": "memo" },
+        { "header": "Global Tax Calculation *", "source": "globalTaxCalculation", "required": true },
+        { "header": "Expense Account *", "source": "expenseAccountName", "required": true },
+        { "header": "Expense Description", "source": "description" },
+        { "header": "Expense Line Amount *", "source": "amount", "required": true },
+        { "header": "Expense Tax Code *", "source": "exportTaxCodeName", "required": true, "defaultValue": "Out of Scope" },
+        { "header": "Expense Account Tax Amount *", "source": "taxAmount", "required": true, "defaultValue": 0 },
+        { "header": "Expense Class", "source": "className" },
+        { "header": "Currency Code", "source": "currency" },
+        { "header": "Exchange Rate", "source": "exchangeRate" },
+        { "header": "Payment Method", "source": "paymentMethodName" },
+        { "header": "Expense Customer", "source": "customerName" }
+    ]
+}

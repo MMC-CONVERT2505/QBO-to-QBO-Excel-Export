@@ -1,0 +1,28 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "QBO Accounting Data Export & Regional Template Mapping Tool - backend",
+  "license": "ISC",
+  "author": "",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js",
+    "generate:mappings": "node scripts/generateMappings.js",
+    "generate:templates": "node scripts/generateTemplates.js",
+    "start:live": "node scripts/startLive.js",
+    "oauth:check": "node scripts/checkOAuth.js",
+    "ngrok:sync": "node scripts/syncNgrokUrl.js .env.production",
+    "test": "node --test tests/regression.test.mjs"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^17.4.2",
+    "exceljs": "^4.4.0",
+    "express": "^5.2.1",
+    "express-session": "^1.19.0",
+    "intuit-oauth": "^4.2.5",
+    "uuid": "^11.0.5"
+  }
+}

@@ -1,0 +1,61 @@
+{
+    "entity": "invoiceCreditAllocation",
+    "region": "ZA",
+    "templateSheet": "InvoiceCreditAllocation",
+    "columns": [
+        {
+            "header": "Transaction No.",
+            "source": "docNumber",
+            "required": true,
+            "transform": "trim"
+        },
+        {
+            "header": "TxnDate",
+            "source": "paymentDate",
+            "required": true,
+            "transform": "date_ddmmyyyy"
+        },
+        {
+            "header": "CustomerRef Name",
+            "source": "customerName",
+            "required": true
+        },
+        {
+            "header": "Deposit To Account Ref",
+            "source": "depositAccountName",
+            "required": true
+        },
+        {
+            "header": "Private Note",
+            "source": "memo"
+        },
+        {
+            "header": "CurrencyRef Value",
+            "source": "currency"
+        },
+        {
+            "header": "ExchangeRate",
+            "source": "exchangeRate"
+        },
+        {
+            "header": "TotalAmount",
+            "source": "totalAmount",
+            "required": true
+        },
+        {
+            "header": "Line Amount*",
+            "source": "amount",
+            "required": true
+        },
+        {
+            "header": "Voucher No",
+            "source": "voucherNo",
+            "required": true
+        },
+        {
+            "header": "AppliedToTxnTxnType",
+            "source": "appliedType",
+            "required": true
+        }
+    ]
+}

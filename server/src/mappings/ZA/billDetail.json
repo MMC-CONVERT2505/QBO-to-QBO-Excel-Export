@@ -1,0 +1,143 @@
+{
+    "entity": "billDetail",
+    "region": "ZA",
+    "templateSheet": "Bill",
+    "columns": [
+        {
+            "header": "BillNo *",
+            "source": "docNumber",
+            "required": true,
+            "transform": "trim"
+        },
+        {
+            "header": "Supplier *",
+            "source": "vendorName",
+            "required": true
+        },
+        {
+            "header": "BillDate *",
+            "source": "billDate",
+            "required": true,
+            "transform": "date_ddmmyyyy"
+        },
+        {
+            "header": "DueDate *",
+            "source": "dueDate",
+            "required": true,
+            "transform": "date_ddmmyyyy"
+        },
+        {
+            "header": "Global Tax Calculation *",
+            "staticValue": "TaxExcluded",
+            "required": true
+        },
+        {
+            "header": "Account *",
+            "source": "accountName",
+            "required": true,
+            "requiredUnless": {
+                "field": "lineType",
+                "equals": "Item"
+            }
+        },
+        {
+            "header": "Description",
+            "source": "description"
+        },
+        {
+            "header": "Line Amount / Foreign Amount *",
+            "source": "amount",
+            "required": true
+        },
+        {
+            "header": "Tax Code *",
+            "source": "exportTaxCodeName",
+            "required": true,
+            "defaultValue": "Out of Scope"
+        },
+        {
+            "header": "Tax Amount *",
+            "source": "taxAmount",
+            "required": true,
+            "defaultValue": 0
+        },
+        {
+            "header": "Class",
+            "source": "className"
+        },
+        {
+            "header": "Location",
+            "source": "locationName"
+        },
+        {
+            "header": "Terms",
+            "source": "termName"
+        },
+        {
+            "header": "Currency Code",
+            "source": "currency",
+            "defaultValue": "ZAR"
+        },
+        {
+            "header": "Exchange Rate",
+            "source": "exchangeRate",
+            "defaultValue": 1
+        },
+        {
+            "header": "SKU",
+            "source": "sku"
+        },
+        {
+            "header": "Service Date",
+            "source": "serviceDate",
+            "transform": "date_ddmmyyyy"
+        },
+        {
+            "header": "Product/Service *",
+            "source": "productServiceName",
+            "required": true,
+            "requiredUnless": {
+                "field": "lineType",
+                "equals": "Account"
+            }
+        },
+        {
+            "header": "Quantity *",
+            "source": "quantity",
+            "required": true
+        },
+        {
+            "header": "Unit Price/Rate *",
+            "source": "rate",
+            "required": true
+        },
+        {
+            "header": "Product & Service (Item)",
+            "source": "itemName"
+        },
+        {
+            "header": "Product & Service Description",
+            "source": "itemDescription"
+        },
+        {
+            "header": "Product & Service Tax Code",
+            "source": "itemTaxCodeName"
+        },
+        {
+            "header": "Product & Service Tax Amount",
+            "source": "itemTaxAmount"
+        },
+        {
+            "header": "Expense Customer Job",
+            "source": "expenseCustomerJob"
+        },
+        {
+            "header": "Product & Service Customer Job",
+            "source": "itemCustomerJob"
+        },
+        {
+            "header": "Memo",
+            "source": "memo"
+        }
+    ]
+}

@@ -1,0 +1,21 @@
+{
+    "entity": "customer",
+    "region": "AU",
+    "templateSheet": "Customers",
+    "columns": [
+        { "header": "Company", "source": "companyName" },
+        { "header": "First Name", "source": "firstName" },
+        { "header": "Last Name", "source": "lastName" },
+        { "header": "Display Name *", "source": "displayName", "required": true, "transform": "trim" },
+        { "header": "Resale Number", "source": "resaleNumber" },
+        { "header": "Print On Check Name", "source": "printOnCheckName" },
+        { "header": "BillAddr Line1", "source": "billingLine1" },
+        { "header": "BillAddr City", "source": "billingCity" },
+        { "header": "BillAddr PostalCode", "source": "billingPostalCode" },
+        { "header": "BillAddr Country", "source": "billingCountry" },
+        { "header": "BillAddr CountrySubDivisionCode", "source": "billingRegion" },
+        { "header": "Phone", "source": "phone" },
+        { "header": "Email", "source": "email" },
+        { "header": "CurrencyRef Value", "source": "currency", "defaultValue": "AUD" }
+    ]
+}

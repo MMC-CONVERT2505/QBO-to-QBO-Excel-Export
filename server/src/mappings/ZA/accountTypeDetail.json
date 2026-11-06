@@ -1,0 +1,78 @@
+{
+  "source": "source/account_mapping.xlsx",
+  "detailByType": {
+    "current liabilities": {
+      "type": "Current liabilities",
+      "detail": "Other Current Liabilities"
+    },
+    "accounts receivable (a/r)": {
+      "type": "Accounts receivable (A/R)",
+      "detail": "Accounts receivable (A/R)"
+    },
+    "fixed assets": {
+      "type": "Fixed assets",
+      "detail": "Other fixed assets"
+    },
+    "non-current assets": {
+      "type": "Non-current assets",
+      "detail": "Other non-current assets"
+    },
+    "accounts payable (a/p)": {
+      "type": "Accounts payable (A/P)",
+      "detail": "Accounts Payable (A/P)"
+    },
+    "credit card": {
+      "type": "Credit card",
+      "detail": "Credit Card"
+    },
+    "current assets": {
+      "type": "Current assets",
+      "detail": "Other current assets"
+    },
+    "non-current liabilities": {
+      "type": "Non-current liabilities",
+      "detail": "Other non-current liabilities"
+    },
+    "owner's equity": {
+      "type": "Owner's equity",
+      "detail": "Owner's Equity"
+    },
+    "income": {
+      "type": "Income",
+      "detail": "Revenue - General"
+    },
+    "cost of sales": {
+      "type": "Cost of sales",
+      "detail": "Supplies and materials - COS"
+    },
+    "expenses": {
+      "type": "Expenses",
+      "detail": "Office/General Administrative Expenses"
+    },
+    "other income": {
+      "type": "Other income",
+      "detail": "Other Miscellaneous Income"
+    },
+    "other expense": {
+      "type": "Other expense",
+      "detail": "Other Expense"
+    },
+    "cash and cash equivalents": {
+      "type": "Cash and cash equivalents",
+      "detail": "Cash and cash equivalents/Bank"
+    }
+  },
+  "duplicates": [
+    {
+      "type": "Non-current liabilities",
+      "detail": "Other non-current liabilities",
+      "rows": [
+        9,
+        17,
+        18,
+        19
+      ]
+    }
+  ],
+  "conflicts": []
+}

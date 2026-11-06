@@ -1,0 +1,70 @@
+{
+    "entity": "item",
+    "region": "NZ",
+    "templateSheet": "Items",
+    "columns": [
+        {
+            "header": "Item Name",
+            "source": "fullyQualifiedName",
+            "required": true,
+            "transform": "trim"
+        },
+        {
+            "header": "Type",
+            "source": "type",
+            "required": true,
+            "valueMap": {
+                "Inventory": "Inventory Item",
+                "NonInventory": "Non-Inventory Item",
+                "Service": "Service Item"
+            }
+        },
+        {
+            "header": "SKU",
+            "source": "sku"
+        },
+        {
+            "header": "Description",
+            "source": "description"
+        },
+        {
+            "header": "Sales Price",
+            "source": "unitPrice",
+            "defaultValue": 0
+        },
+        {
+            "header": "Purchase Cost",
+            "source": "purchaseCost",
+            "defaultValue": 0
+        },
+        {
+            "header": "Income Account",
+            "source": "incomeAccountName",
+            "required": true,
+            "requiredUnless": {
+                "field": "type",
+                "equals": "Category"
+            }
+        },
+        {
+            "header": "Expense Account",
+            "source": "expenseAccountName"
+        },
+        {
+            "header": "Taxable",
+            "source": "taxable",
+            "valueMap": {
+                "true": "Yes",
+                "false": "No"
+            }
+        },
+        {
+            "header": "Status",
+            "source": "active",
+            "valueMap": {
+                "true": "Active",
+                "false": "Inactive"
+            }
+        }
+    ]
+}

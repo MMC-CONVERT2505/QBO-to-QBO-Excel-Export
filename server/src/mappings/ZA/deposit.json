@@ -1,0 +1,25 @@
+{
+    "entity": "deposit",
+    "region": "ZA",
+    "templateSheet": "Deposit",
+    "columns": [
+        { "header": "Deposit No *", "source": "docNumber", "required": true, "transform": "trim" },
+        { "header": "Date *", "source": "depositDate", "required": true, "transform": "date_ddmmyyyy" },
+        { "header": "Deposit To Account *", "source": "depositAccountName", "required": true },
+        { "header": "Received From", "source": "receivedFrom" },
+        { "header": "Global Tax Calculation *", "source": "globalTaxCalculation", "required": true },
+        { "header": "Line Account *", "source": "lineAccountName", "required": true },
+        { "header": "Line Description", "source": "description" },
+        { "header": "Line Amount *", "source": "amount", "required": true },
+        { "header": "Line Class", "source": "className" },
+        { "header": "Location", "source": "locationName" },
+        { "header": "Line Tax Code", "source": "exportTaxCodeName", "defaultValue": "Out of Scope" },
+        { "header": "Tax Applicable On *", "source": "taxApplicableOn", "required": true, "defaultValue": "Sales" },
+        { "header": "Tax Amount *", "source": "taxAmount", "required": true, "defaultValue": 0 },
+        { "header": "Memo", "source": "memo" },
+        { "header": "Currency Code", "source": "currency" },
+        { "header": "Exchange Rate", "source": "exchangeRate" },
+        { "header": "Line Payment Method", "source": "paymentMethodName" },
+        { "header": "Linked Transaction Type", "source": "linkedTxnType" }
+    ]
+}

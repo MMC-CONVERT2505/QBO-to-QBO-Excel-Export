@@ -1,0 +1,57 @@
+{
+    "entity": "otherJournal",
+    "region": "ZA",
+    "templateSheet": "OtherJournal",
+    "columns": [
+        {
+            "header": "Journal No *",
+            "source": "docNumber",
+            "required": true,
+            "transform": "trim"
+        },
+        {
+            "header": "Journal Date *",
+            "source": "journalDate",
+            "required": true,
+            "transform": "date_ddmmyyyy"
+        },
+        {
+            "header": "Memo",
+            "source": "memo"
+        },
+        {
+            "header": "Account *",
+            "source": "accountName",
+            "required": true
+        },
+        {
+            "header": "Amount *",
+            "source": "amount",
+            "required": true
+        },
+        {
+            "header": "Description",
+            "source": "description"
+        },
+        {
+            "header": "Name",
+            "source": "entityName"
+        },
+        {
+            "header": "Tax Code",
+            "source": "taxCodeName"
+        },
+        {
+            "header": "Class",
+            "source": "className"
+        },
+        {
+            "header": "Currency Code",
+            "source": "currency"
+        },
+        {
+            "header": "Exchange Rate",
+            "source": "exchangeRate"
+        }
+    ]
+}

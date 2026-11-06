@@ -1,0 +1,27 @@
+{
+  "9341458489970233": {
+    "ZA": {
+      "enabled": false,
+      "entries": {
+        "25": {
+          "sourceId": "25",
+          "sourceName": "Old Standard",
+          "sourceRate": 14,
+          "targetName": "Old Standard",
+          "targetRate": 14,
+          "targetType": "",
+          "calcType": "",
+          "origin": "suggested",
+          "confirmed": true,
+          "updatedAt": "2026-10-23T11:36:00.043Z"
+        }
+      }
+    }
+  },
+  "9341458551163911": {
+    "ZA": {
+      "enabled": false,
+      "entries": {}
+    }
+  }
+}

@@ -1,0 +1,52 @@
+{
+    "entity": "ar_creditmemo",
+    "region": "ZA",
+    "templateSheet": "Adjustment Note",
+    "columns": [
+        {
+            "header": "Adjustment Note No *",
+            "source": "docNumber",
+            "required": true,
+            "transform": "trim"
+        },
+        {
+            "header": "Customer *",
+            "source": "customerName",
+            "required": true
+        },
+        {
+            "header": "Adjustment Note Date *",
+            "source": "txnDate",
+            "required": true,
+            "transform": "date_ddmmyyyy"
+        },
+        {
+            "header": "Product/Service *",
+            "staticValue": "Sales",
+            "required": true
+        },
+        {
+            "header": "Product/Service Quantity *",
+            "staticValue": 1,
+            "required": true
+        },
+        {
+            "header": "Product/Service Rate *",
+            "source": "openBalance",
+            "required": true
+        },
+        {
+            "header": "Product/Service Amount *",
+            "source": "openBalance",
+            "required": true
+        },
+        {
+            "header": "Currency",
+            "source": "currency"
+        },
+        {
+            "header": "Exchange Rate",
+            "source": "exchangeRate"
+        }
+    ]
+}

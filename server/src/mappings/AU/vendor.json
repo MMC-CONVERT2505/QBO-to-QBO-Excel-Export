@@ -1,0 +1,18 @@
+{
+    "entity": "vendor",
+    "region": "AU",
+    "templateSheet": "Vendors",
+    "columns": [
+        { "header": "Company", "source": "companyName" },
+        { "header": "Display Name *", "source": "displayName", "required": true, "transform": "trim" },
+        { "header": "Print On Check Name", "source": "printOnCheckName" },
+        { "header": "BillAddr Line1", "source": "billingLine1" },
+        { "header": "BillAddr City", "source": "billingCity" },
+        { "header": "BillAddr PostalCode", "source": "billingPostalCode" },
+        { "header": "BillAddr Country", "source": "billingCountry" },
+        { "header": "BillAddr CountrySubDivisionCode", "source": "billingRegion" },
+        { "header": "Phone", "source": "phone" },
+        { "header": "Email", "source": "email" },
+        { "header": "CurrencyRef Value", "source": "currency", "defaultValue": "AUD" }
+    ]
+}

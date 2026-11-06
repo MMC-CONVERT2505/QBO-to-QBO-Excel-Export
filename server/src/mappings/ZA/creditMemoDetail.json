@@ -1,0 +1,109 @@
+{
+    "entity": "creditMemoDetail",
+    "region": "ZA",
+    "templateSheet": "Credit Note",
+    "columns": [
+        {
+            "header": "Adjustment Note No *",
+            "source": "docNumber",
+            "required": true,
+            "transform": "trim"
+        },
+        {
+            "header": "Customer *",
+            "source": "customerName",
+            "required": true
+        },
+        {
+            "header": "Adjustment Note Date *",
+            "source": "creditDate",
+            "required": true,
+            "transform": "date_ddmmyyyy"
+        },
+        {
+            "header": "Global Tax Calculation *",
+            "staticValue": "TaxExcluded",
+            "required": true
+        },
+        {
+            "header": "Service Date",
+            "source": "serviceDate",
+            "transform": "date_ddmmyyyy"
+        },
+        {
+            "header": "Product/Service *",
+            "source": "productServiceName",
+            "required": true
+        },
+        {
+            "header": "Product/Service Description *",
+            "source": "description",
+            "required": true
+        },
+        {
+            "header": "Product/Service Quantity *",
+            "source": "quantity",
+            "required": true
+        },
+        {
+            "header": "Product/Service Rate *",
+            "source": "rate",
+            "required": true
+        },
+        {
+            "header": "Product/Service Amount *",
+            "source": "amount",
+            "required": true
+        },
+        {
+            "header": "Product/Service Tax Code *",
+            "source": "exportTaxCodeName",
+            "required": true,
+            "defaultValue": "Out of Scope"
+        },
+        {
+            "header": "Product/Service Tax Amount *",
+            "source": "taxAmount",
+            "required": true,
+            "defaultValue": 0
+        },
+        {
+            "header": "Product/Service Class",
+            "source": "className"
+        },
+        {
+            "header": "Note to customer",
+            "source": "customerMemo"
+        },
+        {
+            "header": "Memo on statement",
+            "source": "privateNote"
+        },
+        {
+            "header": "SKU",
+            "source": "sku"
+        },
+        {
+            "header": "Terms",
+            "source": "termName"
+        },
+        {
+            "header": "Discount Percent",
+            "source": "discountPercent"
+        },
+        {
+            "header": "Currency Code",
+            "source": "currency",
+            "defaultValue": "ZAR"
+        },
+        {
+            "header": "Exchange rate",
+            "source": "exchangeRate",
+            "defaultValue": 1
+        },
+        {
+            "header": "Location",
+            "source": "locationName"
+        }
+    ]
+}

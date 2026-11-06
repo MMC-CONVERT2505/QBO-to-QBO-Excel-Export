@@ -1,0 +1,19 @@
+{
+    "entity": "ar",
+    "region": "AU",
+    "templateSheet": "AR",
+    "columns": [
+        { "header": "Invoice No *", "source": "docNumber", "required": true, "transform": "trim" },
+        { "header": "Customer *", "source": "customerName", "required": true },
+        { "header": "Invoice Date *", "source": "txnDate", "required": true },
+        { "header": "Due Date *", "source": "dueDate", "required": true, "requiredUnless": { "field": "docType", "equals": "Credit Memo" } },
+        { "header": "Product/Service *", "staticValue": "Open Balance", "required": true },
+        { "header": "Product/Service Description", "source": "docType" },
+        { "header": "Product/Service Quantity *", "staticValue": 1, "required": true },
+        { "header": "Product/Service Rate *", "source": "signedOpenBalance", "required": true },
+        { "header": "Product/Service Amount *", "source": "signedOpenBalance", "required": true },
+        { "header": "Currency code", "source": "currency" },
+        { "header": "Exchange Rate", "source": "exchangeRate" },
+        { "header": "Terms", "source": "salesTermName" }
+    ]
+}

@@ -1,0 +1,66 @@
+{
+    "entity": "billCreditAllocation",
+    "region": "ZA",
+    "templateSheet": "BillCreditAllocation",
+    "columns": [
+        {
+            "header": "Transaction No.",
+            "source": "txnId",
+            "required": true
+        },
+        {
+            "header": "DocNumber",
+            "source": "docNumber",
+            "required": true,
+            "transform": "trim"
+        },
+        {
+            "header": "TxnDate",
+            "source": "paymentDate",
+            "required": true,
+            "transform": "date_ddmmyyyy"
+        },
+        {
+            "header": "VendorRef",
+            "source": "vendorName",
+            "required": true
+        },
+        {
+            "header": "BankCreditAccount",
+            "source": "accountName",
+            "required": true
+        },
+        {
+            "header": "Private Note",
+            "source": "memo"
+        },
+        {
+            "header": "CurrencyRef Value",
+            "source": "currency"
+        },
+        {
+            "header": "ExchangeRate",
+            "source": "exchangeRate"
+        },
+        {
+            "header": "TotalAmount",
+            "source": "totalAmount",
+            "required": true
+        },
+        {
+            "header": "Line Amount*",
+            "source": "amount",
+            "required": true
+        },
+        {
+            "header": "Voucher No",
+            "source": "voucherNo",
+            "required": true
+        },
+        {
+            "header": "Txn Type",
+            "source": "txnType",
+            "required": true
+        }
+    ]
+}

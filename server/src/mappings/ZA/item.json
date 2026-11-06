@@ -1,0 +1,98 @@
+{
+    "entity": "item",
+    "region": "ZA",
+    "templateSheet": "Items",
+    "columns": [
+        {
+            "header": "Product/Service *",
+            "source": "fullyQualifiedName",
+            "required": true,
+            "transform": "trim"
+        },
+        {
+            "header": "Type *",
+            "source": "type",
+            "required": true,
+            "valueMap": {
+                "Category": "Service"
+            }
+        },
+        {
+            "header": "Description",
+            "source": "description"
+        },
+        {
+            "header": "Price",
+            "source": "unitPrice"
+        },
+        {
+            "header": "Cost",
+            "source": "purchaseCost"
+        },
+        {
+            "header": "Qty On Hand",
+            "source": "qtyOnHand"
+        },
+        {
+            "header": "Sales Tax Code",
+            "source": "salesTaxCodeName"
+        },
+        {
+            "header": "Purchases Tax Code",
+            "source": "purchaseTaxCodeName"
+        },
+        {
+            "header": "SKU",
+            "source": "sku"
+        },
+        {
+            "header": "Taxable",
+            "source": "taxable",
+            "valueMap": {
+                "true": "Yes",
+                "false": "No"
+            }
+        },
+        {
+            "header": "Income Account *",
+            "source": "incomeAccountFullName",
+            "required": true,
+            "requiredUnless": {
+                "field": "type",
+                "equals": "Category"
+            }
+        },
+        {
+            "header": "Class",
+            "source": "className"
+        },
+        {
+            "header": "Purchase Description",
+            "source": "purchaseDescription"
+        },
+        {
+            "header": "Expense Account",
+            "source": "expenseAccountFullName"
+        },
+        {
+            "header": "Preferred Supplier",
+            "source": "prefVendorName"
+        },
+        {
+            "header": "Inventory asset account",
+            "source": "assetAccountFullName"
+        },
+        {
+            "header": "Quantity as of date",
+            "source": "asOfDate"
+        },
+        {
+            "header": "Category",
+            "source": "categoryName"
+        },
+        {
+            "header": "Parent Item",
+            "source": "parentItemName"
+        }
+    ]
+}

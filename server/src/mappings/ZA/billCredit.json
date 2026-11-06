@@ -1,0 +1,135 @@
+{
+    "entity": "billCredit",
+    "region": "ZA",
+    "templateSheet": "SupplierCredit",
+    "columns": [
+        {
+            "header": "Ref No *",
+            "source": "docNumber",
+            "required": true,
+            "transform": "trim"
+        },
+        {
+            "header": "Supplier *",
+            "source": "vendorName",
+            "required": true
+        },
+        {
+            "header": "Date *",
+            "source": "billDate",
+            "required": true,
+            "transform": "date_ddmmyyyy"
+        },
+        {
+            "header": "Global Tax Calculation *",
+            "staticValue": "TaxExcluded",
+            "required": true
+        },
+        {
+            "header": "Account *",
+            "source": "accountName",
+            "required": true,
+            "requiredUnless": {
+                "field": "lineType",
+                "equals": "Item"
+            }
+        },
+        {
+            "header": "Description *",
+            "source": "description"
+        },
+        {
+            "header": "Amount *",
+            "source": "amount",
+            "required": true
+        },
+        {
+            "header": "Tax Code *",
+            "source": "exportTaxCodeName",
+            "required": true,
+            "defaultValue": "Out of Scope"
+        },
+        {
+            "header": "Taxable Amount *",
+            "source": "taxAmount",
+            "required": true,
+            "defaultValue": 0
+        },
+        {
+            "header": "Class",
+            "source": "className"
+        },
+        {
+            "header": "Location",
+            "source": "locationName"
+        },
+        {
+            "header": "Terms",
+            "source": "termName"
+        },
+        {
+            "header": "Currency",
+            "source": "currency"
+        },
+        {
+            "header": "Exchange rate",
+            "source": "exchangeRate"
+        },
+        {
+            "header": "SKU",
+            "source": "sku"
+        },
+        {
+            "header": "Service Date *",
+            "source": "serviceDate",
+            "transform": "date_ddmmyyyy"
+        },
+        {
+            "header": "Product/Service *",
+            "source": "productServiceName",
+            "required": true,
+            "requiredUnless": {
+                "field": "lineType",
+                "equals": "Account"
+            }
+        },
+        {
+            "header": "Qty *",
+            "source": "quantity",
+            "required": true
+        },
+        {
+            "header": "Unit Price/Rate *",
+            "source": "rate",
+            "required": true
+        },
+        {
+            "header": "Line Item",
+            "source": "itemName"
+        },
+        {
+            "header": "Line Item Description",
+            "source": "itemDescription"
+        },
+        {
+            "header": "Line Item Tax Code",
+            "source": "itemTaxCodeName"
+        },
+        {
+            "header": "Line Item Tax Amount",
+            "source": "itemTaxAmount"
+        },
+        {
+            "header": "Expense Customer Ref Name",
+            "source": "expenseCustomerJob"
+        },
+        {
+            "header": "Line Customer Ref Name",
+            "source": "itemCustomerJob"
+        },
+        {
+            "header": "Memo",
+            "source": "memo"
+        }
+    ]
+}

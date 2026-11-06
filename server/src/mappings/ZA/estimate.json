@@ -1,0 +1,114 @@
+{
+    "entity": "estimate",
+    "region": "ZA",
+    "templateSheet": "Estimate",
+    "columns": [
+        {
+            "header": "Estimate No *",
+            "source": "docNumber",
+            "required": true,
+            "transform": "trim"
+        },
+        {
+            "header": "Customer *",
+            "source": "customerName",
+            "required": true
+        },
+        {
+            "header": "Estimate Date *",
+            "source": "estimateDate",
+            "required": true,
+            "transform": "date_ddmmyyyy"
+        },
+        {
+            "header": "Expiration Date *",
+            "source": "expirationDate",
+            "transform": "date_ddmmyyyy"
+        },
+        {
+            "header": "Estimate Status *",
+            "source": "estimateStatus"
+        },
+        {
+            "header": "Accepted By *",
+            "source": "acceptedBy"
+        },
+        {
+            "header": "Accepted Date *",
+            "source": "acceptedDate",
+            "transform": "date_ddmmyyyy"
+        },
+        {
+            "header": "Memo *",
+            "source": "memo"
+        },
+        {
+            "header": "Message displayed on estimate *",
+            "source": "customerMemo"
+        },
+        {
+            "header": "Global Tax Calculation *",
+            "source": "globalTaxCalculation",
+            "required": true
+        },
+        {
+            "header": "Discount Percent",
+            "source": "discountPercent"
+        },
+        {
+            "header": "Product/Service *",
+            "source": "productServiceName",
+            "required": true
+        },
+        {
+            "header": "Product/Service Description *",
+            "source": "description"
+        },
+        {
+            "header": "Product/Service Quantity *",
+            "source": "quantity",
+            "required": true
+        },
+        {
+            "header": "Product/Service Rate *",
+            "source": "rate"
+        },
+        {
+            "header": "Product/Service Amount *",
+            "source": "amount",
+            "required": true
+        },
+        {
+            "header": "Product/Service Tax Code *",
+            "source": "exportTaxCodeName",
+            "required": true,
+            "defaultValue": "Out of Scope"
+        },
+        {
+            "header": "Product/Service Tax Amount *",
+            "source": "taxAmount",
+            "required": true,
+            "defaultValue": 0
+        },
+        {
+            "header": "Product/Service Class",
+            "source": "className"
+        },
+        {
+            "header": "Location",
+            "source": "locationName"
+        },
+        {
+            "header": "Currency Code *",
+            "source": "currency"
+        },
+        {
+            "header": "Exchange Rate *",
+            "source": "exchangeRate"
+        },
+        {
+            "header": "CustomFieldPONumber",
+            "source": "poNumber"
+        }
+    ]
+}

@@ -1,0 +1,59 @@
+{
+    "entity": "ap_bill",
+    "region": "ZA",
+    "templateSheet": "Bill",
+    "columns": [
+        {
+            "header": "BillNo *",
+            "source": "docNumber",
+            "transform": "trim"
+        },
+        {
+            "header": "Supplier *",
+            "source": "vendorName",
+            "required": true
+        },
+        {
+            "header": "BillDate *",
+            "source": "txnDate",
+            "required": true,
+            "transform": "date_ddmmyyyy"
+        },
+        {
+            "header": "DueDate *",
+            "source": "dueDate",
+            "required": true,
+            "transform": "date_ddmmyyyy"
+        },
+        {
+            "header": "Terms",
+            "source": "salesTermName"
+        },
+        {
+            "header": "Location",
+            "source": "locationName"
+        },
+        {
+            "header": "Memo",
+            "source": "memo"
+        },
+        {
+            "header": "Account *",
+            "staticValue": "Retained Earnings",
+            "required": true
+        },
+        {
+            "header": "LineAmount *",
+            "source": "openBalance",
+            "required": true
+        },
+        {
+            "header": "Currency",
+            "source": "currency"
+        },
+        {
+            "header": "Exchange rate",
+            "source": "exchangeRate"
+        }
+    ]
+}

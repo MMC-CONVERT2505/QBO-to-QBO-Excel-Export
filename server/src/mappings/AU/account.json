@@ -1,0 +1,40 @@
+{
+    "entity": "account",
+    "region": "AU",
+    "templateSheet": "Accounts",
+    "columns": [
+        {
+            "header": "Account Number",
+            "source": "accountNumber"
+        },
+        {
+            "header": "Name *",
+            "source": "fullyQualifiedName",
+            "required": true,
+            "transform": "trim"
+        },
+        {
+            "header": "Account Type *",
+            "source": "accountType",
+            "required": true
+        },
+        {
+            "header": "Account Detail Type *",
+            "source": "accountSubType",
+            "required": true
+        },
+        {
+            "header": "Parent Ref Name",
+            "source": "parentAccountName"
+        },
+        {
+            "header": "Description",
+            "source": "description"
+        },
+        {
+            "header": "Currency Ref Value",
+            "source": "currency",
+            "defaultValue": "AUD"
+        }
+    ]
+}

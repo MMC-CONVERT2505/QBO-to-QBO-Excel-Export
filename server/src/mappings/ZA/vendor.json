@@ -1,0 +1,21 @@
+{
+    "entity": "vendor",
+    "region": "ZA",
+    "templateSheet": "Vendors",
+    "columns": [
+        { "header": "Display Name As *", "source": "displayName", "required": true, "transform": "trim" },
+        { "header": "First Name", "source": "firstName" },
+        { "header": "Last Name", "source": "lastName" },
+        { "header": "Company", "source": "companyName" },
+        { "header": "Billing Address Line 1", "source": "billingLine1" },
+        { "header": "Billing Address City", "source": "billingCity" },
+        { "header": "Billing Address Country Subdivision Code", "source": "billingRegion" },
+        { "header": "Billing Address Postal Code", "source": "billingPostalCode" },
+        { "header": "Billing Address Country", "source": "billingCountry" },
+        { "header": "Email", "source": "email" },
+        { "header": "Phone", "source": "phone" },
+        { "header": "Opening Balance", "source": "balance" },
+        { "header": "Tax ID", "source": "taxIdentifier" },
+        { "header": "Currency Code", "source": "currency", "defaultValue": "ZAR" }
+    ]
+}

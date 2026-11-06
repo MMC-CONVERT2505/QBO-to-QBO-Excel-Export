@@ -1,0 +1,64 @@
+{
+  "entity": "account",
+  "region": "ZA",
+  "templateSheet": "Accounts",
+  "columns": [
+    {
+      "header": "Account number *",
+      "source": "accountNumber"
+    },
+    {
+      "header": "Account name *",
+      "source": "fullyQualifiedName",
+      "required": true,
+      "transform": "trim"
+    },
+    {
+      "header": "Account type *",
+      "source": "accountType",
+      "required": true,
+      "valueMap": {
+        "Bank": "Cash and cash equivalents",
+        "Accounts Receivable": "Accounts receivable (A/R)",
+        "Other Current Asset": "Current assets",
+        "Fixed Asset": "Fixed assets",
+        "Other Asset": "Non-current assets",
+        "Accounts Payable": "Accounts payable (A/P)",
+        "Credit Card": "Credit card",
+        "Other Current Liability": "Current liabilities",
+        "Long Term Liability": "Non-current liabilities",
+        "Equity": "Owner's equity",
+        "Income": "Income",
+        "Cost of Goods Sold": "Cost of sales",
+        "Expense": "Expenses",
+        "Other Income": "Other income",
+        "Other Expense": "Other expense"
+      }
+    },
+    {
+      "header": "Detail type *",
+      "source": "accountSubType",
+      "required": true,
+      "lookup": {
+        "fromHeader": "Account type *",
+        "file": "accountTypeDetail.json",
+        "table": "detailByType",
+        "field": "detail",
+        "issueType": "unmapped_account_type"
+      }
+    },
+    {
+      "header": "Description",
+      "source": "description"
+    },
+    {
+      "header": "Currency",
+      "source": "currency",
+      "defaultValue": "ZAR"
+    },
+    {
+      "header": "Opening balance",
+      "source": "currentBalance"
+    }
+  ]
+}

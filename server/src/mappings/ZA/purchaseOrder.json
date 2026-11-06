@@ -1,0 +1,118 @@
+{
+    "entity": "purchaseOrder",
+    "region": "ZA",
+    "templateSheet": "PurchaseOrder",
+    "columns": [
+        {
+            "header": "PO No *",
+            "source": "docNumber",
+            "required": true,
+            "transform": "trim"
+        },
+        {
+            "header": "Vendor *",
+            "source": "vendorName",
+            "required": true
+        },
+        {
+            "header": "Purchase Order Status *",
+            "source": "poStatus"
+        },
+        {
+            "header": "Purchase Order Date *",
+            "source": "orderDate",
+            "required": true,
+            "transform": "date_ddmmyyyy"
+        },
+        {
+            "header": "Due Date *",
+            "source": "dueDate",
+            "transform": "date_ddmmyyyy"
+        },
+        {
+            "header": "Memo *",
+            "source": "memo"
+        },
+        {
+            "header": "Global Tax Calculation *",
+            "source": "globalTaxCalculation",
+            "required": true
+        },
+        {
+            "header": "Expense Account *",
+            "source": "expenseAccountName"
+        },
+        {
+            "header": "Expense Description *",
+            "source": "expenseDescription"
+        },
+        {
+            "header": "Expense Line Amount *",
+            "source": "expenseAmount"
+        },
+        {
+            "header": "Expense Customer *",
+            "source": "expenseCustomerName"
+        },
+        {
+            "header": "Expense Class *",
+            "source": "expenseClassName"
+        },
+        {
+            "header": "Expense Tax Code *",
+            "source": "expenseTaxCodeName"
+        },
+        {
+            "header": "Product/Service *",
+            "source": "productServiceName"
+        },
+        {
+            "header": "Product/Service Description *",
+            "source": "description"
+        },
+        {
+            "header": "Product/Service Quantity *",
+            "source": "quantity"
+        },
+        {
+            "header": "Product/Service Rate *",
+            "source": "rate"
+        },
+        {
+            "header": "Product/Service Amount *",
+            "source": "productServiceAmount"
+        },
+        {
+            "header": "Product/Service Tax Code *",
+            "source": "productServiceTaxCodeName"
+        },
+        {
+            "header": "Product/Service Tax Amount *",
+            "source": "productServiceTaxAmount"
+        },
+        {
+            "header": "Product/Service Class *",
+            "source": "className"
+        },
+        {
+            "header": "Location *",
+            "source": "locationName"
+        },
+        {
+            "header": "Currency Code *",
+            "source": "currency"
+        },
+        {
+            "header": "Exchange Rate *",
+            "source": "exchangeRate"
+        },
+        {
+            "header": "CustomFieldPONumber *",
+            "source": "poNumber"
+        },
+        {
+            "header": "Terms *",
+            "source": "termName"
+        }
+    ]
+}

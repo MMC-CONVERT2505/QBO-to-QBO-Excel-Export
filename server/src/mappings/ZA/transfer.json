@@ -1,0 +1,15 @@
+{
+    "entity": "transfer",
+    "region": "ZA",
+    "templateSheet": "Transfer",
+    "columns": [
+        { "header": "Transfer Funds From *", "source": "fromAccountName", "required": true },
+        { "header": "Transfer Funds To *", "source": "toAccountName", "required": true },
+        { "header": "Transfer Amount *", "source": "amount", "required": true },
+        { "header": "Date *", "source": "transferDate", "required": true, "transform": "date_ddmmyyyy" },
+        { "header": "Privatenote", "source": "memo" },
+        { "header": "Currency Code", "source": "currency" },
+        { "header": "Exchange Rate", "source": "exchangeRate" },
+        { "header": "Ref no.", "source": "refNo" }
+    ]
+}

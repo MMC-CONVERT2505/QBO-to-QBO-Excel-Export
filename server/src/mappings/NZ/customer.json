@@ -1,0 +1,74 @@
+{
+    "entity": "customer",
+    "region": "NZ",
+    "templateSheet": "Customers",
+    "columns": [
+        {
+            "header": "Customer Name",
+            "source": "displayName",
+            "required": true,
+            "transform": "trim"
+        },
+        {
+            "header": "Company Name",
+            "source": "companyName"
+        },
+        {
+            "header": "First Name",
+            "source": "firstName"
+        },
+        {
+            "header": "Last Name",
+            "source": "lastName"
+        },
+        {
+            "header": "Email",
+            "source": "email"
+        },
+        {
+            "header": "Phone",
+            "source": "phone"
+        },
+        {
+            "header": "Billing Address Line 1",
+            "source": "billingLine1"
+        },
+        {
+            "header": "Billing City",
+            "source": "billingCity"
+        },
+        {
+            "header": "Billing Region/State",
+            "source": "billingRegion"
+        },
+        {
+            "header": "Billing Postal Code",
+            "source": "billingPostalCode"
+        },
+        {
+            "header": "Billing Country",
+            "source": "billingCountry"
+        },
+        {
+            "header": "Currency",
+            "source": "currency",
+            "defaultValue": "NZD"
+        },
+        {
+            "header": "GST Registered",
+            "source": "taxable",
+            "valueMap": {
+                "true": "Yes",
+                "false": "No"
+            }
+        },
+        {
+            "header": "Status",
+            "source": "active",
+            "valueMap": {
+                "true": "Active",
+                "false": "Inactive"
+            }
+        }
+    ]
+}

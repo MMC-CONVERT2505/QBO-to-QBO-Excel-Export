@@ -1,0 +1,74 @@
+{
+    "entity": "invoicePayment",
+    "region": "ZA",
+    "templateSheet": "Invoice Payment",
+    "columns": [
+        {
+            "header": "Ref No *",
+            "source": "docNumber",
+            "required": true,
+            "transform": "trim"
+        },
+        {
+            "header": "Customer *",
+            "source": "customerName",
+            "required": true
+        },
+        {
+            "header": "Payment Date *",
+            "source": "paymentDate",
+            "required": true,
+            "transform": "date_ddmmyyyy"
+        },
+        {
+            "header": "Payment method *",
+            "source": "paymentMethodName"
+        },
+        {
+            "header": "Memo",
+            "source": "memo"
+        },
+        {
+            "header": "Deposit To Account Name *",
+            "source": "depositAccountName",
+            "required": true
+        },
+        {
+            "header": "Invoice No *",
+            "source": "invoiceNumber",
+            "requiredUnless": {
+                "field": "transactionType",
+                "equals": "JournalEntry"
+            },
+            "required": true
+        },
+        {
+            "header": "Amount *",
+            "source": "amount",
+            "required": true
+        },
+        {
+            "header": "Currency Code",
+            "source": "currency",
+            "defaultValue": "ZAR"
+        },
+        {
+            "header": "Exchange Rate",
+            "source": "exchangeRate",
+            "defaultValue": 1
+        },
+        {
+            "header": "Journal No",
+            "source": "journalNumber"
+        },
+        {
+            "header": "Transaction Type",
+            "source": "transactionType",
+            "required": true
+        },
+        {
+            "header": "Cheque Number",
+            "source": "chequeNumber"
+        }
+    ]
+}

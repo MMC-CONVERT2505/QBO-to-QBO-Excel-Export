@@ -1,0 +1,67 @@
+{
+    "entity": "item",
+    "region": "AU",
+    "templateSheet": "Items",
+    "columns": [
+        {
+            "header": "Name *",
+            "source": "fullyQualifiedName",
+            "required": true,
+            "transform": "trim"
+        },
+        {
+            "header": "Type *",
+            "source": "type",
+            "required": true
+        },
+        {
+            "header": "Sku",
+            "source": "sku"
+        },
+        {
+            "header": "UnitPrice",
+            "source": "unitPrice"
+        },
+        {
+            "header": "Sales Description",
+            "source": "description"
+        },
+        {
+            "header": "Purchase Description",
+            "source": "purchaseDescription"
+        },
+        {
+            "header": "Cost",
+            "source": "purchaseCost"
+        },
+        {
+            "header": "Income AccountRef Name *",
+            "source": "incomeAccountName",
+            "required": true,
+            "requiredUnless": {
+                "field": "type",
+                "equals": "Category"
+            }
+        },
+        {
+            "header": "Expense AccountRef Name",
+            "source": "expenseAccountName"
+        },
+        {
+            "header": "Parent Ref Name",
+            "source": "parentItemName"
+        },
+        {
+            "header": "AssetAccountRef Name",
+            "source": "assetAccountName"
+        },
+        {
+            "header": "Qty On Hand",
+            "source": "qtyOnHand"
+        },
+        {
+            "header": "As Of Date",
+            "source": "asOfDate"
+        }
+    ]
+}

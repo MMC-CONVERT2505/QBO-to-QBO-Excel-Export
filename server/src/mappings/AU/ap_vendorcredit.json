@@ -1,0 +1,16 @@
+{
+    "entity": "ap_vendorcredit",
+    "region": "AU",
+    "templateSheet": "Vendor Credit",
+    "columns": [
+        { "header": "Vendor Credit No *", "source": "docNumber", "required": true, "transform": "trim" },
+        { "header": "Vendor *", "source": "vendorName", "required": true },
+        { "header": "Vendor Credit Date *", "source": "txnDate", "required": true },
+        { "header": "Product/Service *", "staticValue": "Open Balance", "required": true },
+        { "header": "Product/Service Quantity *", "staticValue": 1, "required": true },
+        { "header": "Product/Service Rate *", "source": "openBalance", "required": true },
+        { "header": "Product/Service Amount *", "source": "openBalance", "required": true },
+        { "header": "Currency", "source": "currency" },
+        { "header": "Exchange Rate", "source": "exchangeRate" }
+    ]
+}

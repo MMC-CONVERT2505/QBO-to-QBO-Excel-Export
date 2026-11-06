@@ -1,0 +1,16 @@
+{
+    "entity": "overpayment",
+    "region": "ZA",
+    "templateSheet": "Overpayment",
+    "columns": [
+        { "header": "Ref No *", "source": "docNumber", "required": true, "transform": "trim" },
+        { "header": "Customer *", "source": "customerName", "required": true },
+        { "header": "Payment Date *", "source": "paymentDate", "required": true, "transform": "date_ddmmyyyy" },
+        { "header": "Payment method *", "source": "paymentMethodName" },
+        { "header": "Memo", "source": "memo" },
+        { "header": "Deposit To Account Name *", "source": "depositAccountName", "required": true },
+        { "header": "Amount *", "source": "amount", "required": true },
+        { "header": "Currency Code", "source": "currency", "defaultValue": "ZAR" },
+        { "header": "Exchange Rate", "source": "exchangeRate", "defaultValue": 1 }
+    ]
+}

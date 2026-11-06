@@ -1,0 +1,57 @@
+{
+    "entity": "vendor",
+    "region": "CA",
+    "templateSheet": "Vendors",
+    "columns": [
+        {
+            "header": "Vendor Name",
+            "source": "displayName",
+            "required": true,
+            "transform": "trim"
+        },
+        {
+            "header": "Company Name",
+            "source": "companyName"
+        },
+        {
+            "header": "Email",
+            "source": "email"
+        },
+        {
+            "header": "Phone",
+            "source": "phone"
+        },
+        {
+            "header": "Billing Address Line 1",
+            "source": "billingLine1"
+        },
+        {
+            "header": "Billing City",
+            "source": "billingCity"
+        },
+        {
+            "header": "Billing Country",
+            "source": "billingCountry"
+        },
+        {
+            "header": "Tax ID",
+            "source": "taxIdentifier"
+        },
+        {
+            "header": "1099 Vendor",
+            "source": "is1099",
+            "valueMap": {
+                "true": "Yes",
+                "false": "No"
+            }
+        },
+        {
+            "header": "Status",
+            "source": "active",
+            "valueMap": {
+                "true": "Active",
+                "false": "Inactive"
+            }
+        }
+    ]
+}
